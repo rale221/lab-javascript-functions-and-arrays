@@ -43,7 +43,7 @@ function sumNumbers(numbers) {
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function sum(numbersAvg) {
+function avarageNumbers(numbersAvg) {
   if (numbersAvg.length === 0) {
     return 0
   }
@@ -57,10 +57,19 @@ function sum(numbersAvg) {
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
-function sumOfWords() {
-  if (wordsArr.length === 0)
+function averageWordLength(ArrayOfWords) {
+  if (ArrayOfWords.length === 0) {
     return null
+  }
+  let lenArray = ArrayOfWords.length
+  let totalWordsLetters = 0
+
+  for (let i = 0; i < lenArray; i++) {
+    totalWordsLetters += ArrayOfWords[i].length
+  }
+  return totalWordsLetters / lenArray
 }
+
 
 
 // Iteration #5: Unique arrays
@@ -77,6 +86,12 @@ const wordsUnique = [
   'simple',
   'bring'
 ];
+
+
+
+
+
+
 
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
