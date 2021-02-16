@@ -96,6 +96,67 @@ function averageWordLength(ArrayOfWords) {
 }
 
 
+//Create function avg(arr) that receives any mixed array and calculates average.
+
+const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
+
+function avg(arr) {
+
+  if (arr.lenght === 0) {
+    return null
+  }
+  let suma = 0
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] === 'string') {
+      suma = suma + arr[i].length
+    }
+    if (typeof arr[i] === 'boolean') {
+      suma = suma + 1
+    }
+    if (typeof arr[i] === 'number') {
+      suma = suma + arr[i]
+    }
+  }
+  return suma / arr.length
+}
+const mixAvg = avg(mixedArr)
+console.log(mixAvg)
+
+
+
+// function avarageAll(arr) {
+
+//   let suma = 0
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if (typeof arr[i] === 'string') {
+//       suma = suma + arr[i].length
+//     }
+//     if (typeof arr[i] === 'boolean') {
+//       // if (arr[i]) {
+//       suma = suma + 1
+//       // }
+//     }
+//     if (typeof arr[i] === 'number') {
+//       suma = suma + arr[i]
+//     }
+//   }
+//   return suma / arr.length
+// }
+
+// const prosekReci = avarageAll(mixedArr)
+// console.log(prosekReci)
+
+
+
+
+
+
+
+
+
+
+
 
 // Iteration #5: Unique arrays
 const wordsUnique = [
