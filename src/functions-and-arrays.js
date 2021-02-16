@@ -149,15 +149,6 @@ console.log(mixAvg)
 
 
 
-
-
-
-
-
-
-
-
-
 // Iteration #5: Unique arrays
 const wordsUnique = [
   'crab',
@@ -173,13 +164,18 @@ const wordsUnique = [
   'bring'
 ];
 
-function doesWordExist() {
-  if (wordsUnique.length === 0) {
-    return null
+function uniquifyArray(arr) {
+  let newArr = []
+  for (let i = 0; i < arr.length; i++) {
+    if (newArr.indexOf(arr[i]) === -1 && arr[i] !== '') {
+      newArr.push(arr[i])
+    }
   }
-
-
+  return newArr
 }
+
+const sort = uniquifyArray(wordsUnique)
+console.log(sort)
 
 
 
