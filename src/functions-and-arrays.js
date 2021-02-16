@@ -39,6 +39,31 @@ function sumNumbers(numbers) {
 }
 
 
+function sum(numbers) {
+  if (numbers.lenght === 0) {
+    return 0
+  }
+  let sumOfAll = 0
+  for (i = 0; i < numbers.lenght; i++) {
+    if (typeof numbers[i] === 'string') {
+      sumOfAll = sumOfAll + numbers[i].lenght
+    }
+    if (typeof numbers[i] === 'boolean') {
+      sumOfAll = sumOfAll + 1
+    }
+    if (typeof numbers[i] === 'number') {
+      sumOfAll = sumOfAll + numbers[i]
+    }
+
+  }
+  return sumOfAll
+}
+
+
+
+
+
+
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
@@ -87,6 +112,13 @@ const wordsUnique = [
   'bring'
 ];
 
+function doesWordExist() {
+  if (wordsUnique.length === 0) {
+    return null
+  }
+
+
+}
 
 
 
